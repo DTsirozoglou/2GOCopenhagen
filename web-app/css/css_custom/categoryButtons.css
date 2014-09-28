@@ -1,0 +1,341 @@
+/*  LEFT BAR CATEGORIES BUTTONS    */
+
+#categoryButton{
+
+	width:100%;
+	margin-bottom:3%;
+}
+	
+.dropdown_custom{
+
+	width:20%;
+	height:60px;
+
+}
+
+.btn-group > .btn.active {
+    color: red;
+}
+	
+/****************************************************** Default Button ***********************/
+	
+.btn_custom {
+	font-size: 11pt;
+	text-align: left;
+	font-style:italic;
+	font-family: fantasy;
+	margin-right:2%;
+ 	width:78%;
+	height:60px;
+  	color: white;
+
+}
+.btn_custom:hover,
+.btn_custom:focus,
+.btn_custom:active,
+.open > .dropdown-toggle.btn_custom {
+  color: white;
+}
+
+.dropdown-menu {
+	position: relative;
+	width: 100%;
+	font-size: 13pt;
+	font-style:italic;
+	font-family: fantasy;
+}
+
+/********************ALL BUTTON*********************************************************/	
+.btn_0{
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+}
+
+.btn_0:hover,
+.btn_0:focus,
+.btn_0:active,
+.open > .dropdown-toggle.btn_1 {
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+  	background: rgba(72,72,72, 0.8);
+}
+
+.btn_0.active,
+.open > .dropdown-toggle.btn_1 {
+  background: rgba(72,72,72, 0.8);
+}
+
+.dropdown-0-menu,
+.dropdown-0-menu:hover
+.dropdown-0-menu:active{
+	background-color: rgba(72,72,72, 1);
+}
+
+.dropdown-0-custom{
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+}
+
+.dropdown-0-custom:hover{
+	background-color: rgba(72,72,72, 0.8);
+}
+
+.dropdown-0-menu > li > a:hover,
+.dropdown-0-menu > li > a:focus {
+  background-color: rgba(72,72,72,1 );
+ }
+
+	
+/*****************************************************************************/	
+.btn_1{
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+}
+
+.btn_1:hover,
+.btn_1:focus,
+.btn_1:active,
+.open > .dropdown-toggle.btn_1 {
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+  	background: rgba(72,72,72, 0.8);
+}
+
+.btn_1.active,
+.open > .dropdown-toggle.btn_1 {
+  background: rgba(72,72,72, 0.8);
+}
+
+.dropdown-1-menu,
+.dropdown-1-menu:hover
+.dropdown-1-menu:active{
+	background-color: rgba(72,72,72, 1);
+}
+
+.dropdown-1-custom{
+	background-color: rgba(72,72,72, 1);
+  	border-color: rgba(72,72,72, 1);
+}
+
+.dropdown-1-custom:hover{
+	background-color: rgba(72,72,72, 0.8);
+}
+
+.dropdown-1-menu > li > a:hover,
+.dropdown-1-menu > li > a:focus {
+  background-color: rgba(72,72,72,1 );
+ }
+
+
+
+/*  ARTS CALTURE  */
+
+
+.btn_2{
+	background-color: rgba(204, 102, 51, 1);
+  	border-color: rgba(204, 102, 51, 1);
+}
+
+.btn_2:hover,
+.btn_2:focus,
+.btn_2.active,
+.open > .dropdown-toggle.btn_2 {
+	background-color: rgba(204, 102, 51, 1);
+  	border-color: rgba(204, 102, 51, 1);
+  	background: rgba(204, 102, 51, 0.8);
+}
+
+.btn_2.active,
+.open > .dropdown-toggle.btn_2 {
+  background: rgba(204, 102, 51, 0.8);
+}
+
+.dropdown-2-menu,
+.dropdown-2-menu:hover
+.dropdown-2-menu:active{
+	background-color: rgba(204, 102, 51, 1);
+}
+
+.dropdown-2-custom{
+	background-color: rgba(204, 102, 51, 1);
+  	border-color: rgba(204, 102, 51, 1);
+}
+.dropdown-2-custom:hover{
+	background-color: rgba(204, 102, 51, 0.8);
+
+}
+.dropdown-2-menu > li > a:hover,
+.dropdown-2-menu > li > a:focus {
+  background-color: rgba(204, 102, 51, 1);
+ }
+
+/****** SPORTS ************/
+
+.btn_3{
+	background-color: rgba(51, 153, 204, 1);
+  	border-color: rgba(51, 153, 204, 1);
+}
+
+.btn_3:hover,
+.btn_3:focus,
+.btn_3.active,
+.open > .dropdown-toggle.btn_3 {
+	background-color: rgba(51, 153, 204, 1);
+  	border-color: rgba(51, 153, 204, 1);
+  	background: rgba(51, 153, 204, 0.8);
+}
+
+.btn_3.active,
+.open > .dropdown-toggle.btn_3 {
+  background: rgba(51, 153, 204, 0.8);
+}
+
+.dropdown-3-menu,
+.dropdown-3-menu:hover
+.dropdown-3-menu:active{
+	background-color: rgba(51, 153, 204, 1);
+	background: rgba(51, 153, 204, 1);
+
+}
+
+.dropdown-3-custom{
+	background-color: rgba(51, 153, 204, 1);
+  	border-color: rgba(51, 153, 204, 1);
+
+}
+.dropdown-3-custom:hover{
+	background-color: rgba(51, 153, 204, 0.8);
+
+}
+
+.dropdown-3-menu > li > a:hover,
+.dropdown-3-menu > li > a:focus {
+  background-color: rgba(51, 153, 204, 1);
+ }
+
+
+
+/****** NETWORKING ***************/
+
+.btn_4{
+	background-color: rgba(51,204,102, 1);
+  	border-color: rgba(51,204,102, 1);
+}
+
+.btn_4:hover,
+.btn_4:focus,
+.btn_4.active,
+.open > .dropdown-toggle.btn_4 {
+	background-color: rgba(51,204,102, 1);
+  	border-color: rgba(51,204,102, 1);
+  	background: rgba(51,204,102, 0.8);
+}
+
+.btn_4.active,
+.open > .dropdown-toggle.btn_4 {
+  background: rgba(51,204,102, 0.8);
+}
+
+.dropdown-4-menu,
+.dropdown-4-menu:hover
+.dropdown-4-menu:active{
+	background-color: rgba(51,204,102, 1);
+}
+
+.dropdown-4-custom{
+	background-color: rgba(51,204,102, 1);
+  	border-color: rgba(51,204,102, 1);
+}
+.dropdown-4-custom:hover{
+	background-color: rgba(51,204,102, 0.8);
+}
+.dropdown-4-menu > li > a:hover,
+.dropdown-4-menu > li > a:focus {
+  background-color: rgba(51,204,102, 1);
+ }
+
+
+ /**** CHARITIES  *********/
+
+ .btn_5{
+	background-color: rgba(204,204,102, 1);
+  	border-color: rgba(204,204,102, 1);
+}
+
+.btn_5:hover,
+.btn_5:focus,
+.btn_5:active,
+.open > .dropdown-toggle.btn_5 {
+	background-color: rgba(204,204,102, 1);
+  	border-color: rgba(204,204,102, 1);
+  	background: rgba(204,204,102, 0.8);
+}
+
+.btn_5:active,
+.open > .dropdown-toggle.btn_5 {
+  background: rgba(204,204,102, 0.8);
+}
+
+.dropdown-5-menu,
+.dropdown-5-menu:hover
+.dropdown-5-menu:active{
+	background-color: rgba(204,204,102, 1);
+}
+
+.dropdown-5-custom{
+	background-color: rgba(204,204,102, 1);
+  	border-color: rgba(204,204,102, 1);
+}
+
+.dropdown-5-custom:hover{
+	background-color: rgba(204,204,102, 0.8);
+}
+
+.dropdown-5-menu > li > a:hover,
+.dropdown-5-menu> li > a:focus {
+  background-color: rgba(204,204,102, 1);
+ }
+
+/*
+*** FREE *****
+*/
+
+ .btn_6{
+	background-color: rgba(153, 102, 0, 1);
+  	border-color: rgba(153, 102, 0, 1);
+}
+
+.btn_6:hover,
+.btn_6:focus,
+.btn_6:active,
+.open > .dropdown-toggle.btn_6 {
+	background-color: rgba(153, 102, 0, 1);
+  	border-color: rgba(153, 102, 0, 1);
+  	background: rgba(153, 102, 0, 0.8);
+}
+
+.btn_6:active,
+.btn_6.active,
+.open > .dropdown-toggle.btn_6 {
+  background: rgba(153, 102, 0, 0.8);
+}
+
+.dropdown-6-menu,
+.dropdown-6-menu:hover
+.dropdown-6-menu:active{
+	background-color: rgba(153, 102, 0, 1);
+}
+
+.dropdown-6-custom{
+	background-color: rgba(153, 102, 0, 1);
+  	border-color: rgba(153, 102, 0, 1);
+}
+
+.dropdown-6-custom:hover{
+	background-color: rgba(153, 102, 0, 0.8);
+}
+
+.dropdown-6-menu > li > a:hover,
+.dropdown-6-menu > li > a:focus {
+  background-color: rgba(153, 102, 0, 1);
+ }

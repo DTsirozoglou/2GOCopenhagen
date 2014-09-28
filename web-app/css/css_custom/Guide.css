@@ -1,0 +1,202 @@
+
+/* THE CSS OF THE DISTRICTMAP ON THE GUIDE PAGE */
+#districtMap {
+	
+}
+
+
+
+/********* EVENT CONTAINER CONTENT ( CSS WHEN ON LIST EVENTS DISPLAY ) *********/
+#content {
+	/*	border:1px solid yellow; */
+	height: 100%;
+	
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	margin: 1px;
+}
+
+#content:hover {
+	opacity: 0.95;
+}
+
+
+#guideimage img {
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	box-shadow: 10px 10px 20px #888888;
+}
+
+#guidedescription {
+	background: white;
+	margin-bottom: 20px;
+	/*  OPTIONAL.... INCREASES DESCRIPTIOJN HEIGHT   */
+	height: 180px;
+
+}
+
+
+#guidedescription img {
+	/* Center the image*/
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/* Set the size */
+	max-height: 30px;
+	max-width: 150px;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+
+#content h1 {
+	font-size: 15pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+#content h2 {
+	font-size: 12pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+#content p {
+	font-size: 11pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+/********* EVENT CONTENT ( CSS WHEN ON SINGLE EVENT DISPLAY ) *********/
+#single_article {
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	width: 100%;
+	background-color: white;
+}
+/* TITLE */
+
+#article_title h1 {
+	font-size: 18pt font-style: strong;
+	padding: 6px 30px;
+}
+
+#article_ShareIcons p{
+	padding: 6px 30px;
+}
+
+/* PHOTO */
+#article_photo {
+padding: 6px 30px;
+}
+
+#article_photo img {
+	width: 100%;
+	height: 100%;
+}
+
+/* EXTRA INFORMATION */
+#article_extra_info {
+	display: -ms-flexbox;
+	-ms-box-orient: horizontal;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row;
+	-moz-flex-flow: row;
+	-ms-flex-flow: row;
+	flex-flow: row;
+	
+	padding: 6px 30px;
+}
+
+#article_extra_info h2 {
+	font-size: 15pt;
+	font-style: strong;
+}
+
+#article_extra_info_left {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;	
+}
+
+#article_extra_info_left img {
+	width: 50%;
+}
+
+
+#article_extra_info_middle {
+	-webkit-flex: 2;
+	-moz-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+
+#article_extra_info_right {
+	
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+/* DESCRIPTION */
+#article_description {
+	padding: 6px 30px;
+}
+
+/* FACEBOOK LIKE BUTTON */
+#article_Like_Button {
+	padding: 6px 30px;
+	text-align: right;
+}
+
+/* MAP */
+#article_map {
+	margin: 6px 30px;
+	height:400px;
+	width: :450px;
+	background-color: blue;
+}
+
+/* ARTICLE COMMENTS */
+#article_Comments {
+padding: 6px 30px;
+}

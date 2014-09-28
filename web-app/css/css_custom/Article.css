@@ -1,0 +1,200 @@
+
+
+/********* EVENT CONTAINER CONTENT ( CSS WHEN ON LIST EVENTS DISPLAY ) *********/
+#container{
+	background-color: white;
+}
+
+#content {
+	
+	padding-left:15px;
+	padding-right:15px;
+	/*	border:1px solid yellow; */
+	height: 100%;
+	
+/* 	display: -ms-flexbox; */
+/* 	-ms-box-orient: vertical; */
+	
+/* 	display: -webkit-flex; */
+/* 	display: -moz-flex; */
+/* 	display: -ms-flex; */
+/* 	display: flex; */
+	
+/* 	-webkit-flex-flow: column; */
+/* 	-moz-flex-flow: column; */
+/* 	-ms-flex-flow: column; */
+/* 	flex-flow: column; */
+	
+	margin: 1px;
+}
+
+#content:hover {
+	opacity: 0.95;
+}
+
+#eventimage img {
+	height: 100%;
+	width: 100%;
+	box-shadow: 10px 10px 20px #888888;
+}
+
+#eventimage {
+	 position: relative; 
+	 margin-bottom:15%;
+	z-index: 1000;
+}
+
+#eventdescription {
+	position: absolute; 
+	background:  #D7D7D7;
+	opacity:0.8;
+	top: 85%; 
+   left: 0; 
+   width: 100%;
+
+	margin-bottom: 20px;
+	/*  OPTIONAL.... INCREASES DESCRIPTIOJN HEIGHT   */
+	height: 30%;  
+}
+
+#eventdescription h1 {
+	text-align: left;
+	
+}
+
+#content h1 {
+	font-size: 15pt;
+	opacity:1;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+	color:black;
+}
+
+#content h2 {
+	font-size: 12pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+#content p {
+	font-size: 9pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+/********* Article CONTENT ( CSS WHEN ON SINGLE Article DISPLAY ) *********/
+#single_article {
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	width: 100%;
+	background-color: white;
+}
+/* TITLE */
+
+#article_title h1 {
+	font-size: 18pt font-style: strong;
+	padding: 6px 30px;
+}
+
+#article_ShareIcons p{
+	padding: 6px 30px;
+}
+
+/* PHOTO */
+#article_photo {
+padding: 6px 30px;
+}
+
+#article_photo img {
+	width: 100%;
+	height: 100%;
+}
+
+/* EXTRA INFORMATION */
+#article_extra_info {
+	display: -ms-flexbox;
+	-ms-box-orient: horizontal;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row;
+	-moz-flex-flow: row;
+	-ms-flex-flow: row;
+	flex-flow: row;
+	
+	padding: 6px 30px;
+}
+
+#article_extra_info h2 {
+	font-size: 15pt;
+	font-style: strong;
+}
+
+#article_extra_info_left {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;	
+}
+
+#article_extra_info_left img {
+	width: 50%;
+}
+
+
+#article_extra_info_middle {
+	-webkit-flex: 2;
+	-moz-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+
+#article_extra_info_right {
+	
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+/* DESCRIPTION */
+#article_description {
+	padding: 6px 30px;
+}
+
+/* FACEBOOK LIKE BUTTON */
+#article_Like_Button {
+	padding: 6px 30px;
+	text-align: right;
+}
+
+/* MAP */
+#article_map {
+	margin: 6px 30px;
+	height:400px;
+	width: :450px;
+	background-color: blue;
+}
+
+/* ARTICLE COMMENTS */
+#article_Comments {
+padding: 6px 30px;
+}

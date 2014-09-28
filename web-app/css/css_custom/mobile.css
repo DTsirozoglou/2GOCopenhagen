@@ -1,0 +1,93 @@
+/* TOP MENU FOR MOBILE */
+
+#topmenu_mobile{
+
+background-image: url('../../images/topmenu_images/main.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+
+height:160px;
+}
+
+.blocknav{
+	
+position: relative;
+text-align: center;
+margin-top:100px;
+}
+
+.navigationCircles_mobile img{
+	
+height: 50px;
+width: 50px;
+}
+
+.navigationCircles_mobile:hover
+{
+opacity: 0.5;
+}
+
+/* SIDE BAR MENU  FOR MOBILE */
+
+#contentSideBar_mobile{
+	background-color: white;
+	
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+}
+#eventimageSideBar_mobile{
+	margin-top:5%;
+}
+#eventimageSideBar_mobile img{
+	height:100%;
+	width:100%;
+}
+#eventdescriptionSideBar_mobile{
+	margin-top:5%;	
+	margin-left:2%;
+	margin-right:1%;
+}
+
+#datepicker_mobile{
+	margin-left: -2%;
+}
+
+/*  MAIN SECTION BAR FOR MOBILE FOR SINGLE EVENT*/
+
+#article_extra_info_mobile{
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	margin:6px 30px;
+}
+
+#article_extra_info_left_mobile  img {
+	width: 25%;
+}
+
+#article_extra_info_mobile h2{
+	font-size: 13pt;
+	font-style: strong;
+}
+

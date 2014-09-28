@@ -1,0 +1,260 @@
+svg {       
+	height: 100%;
+    display:block;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+path:hover {  
+	opacity:0.3;
+	stroke:black;!important;
+    stroke-width:2;
+}
+.btn-groupSvg > .btn.activepath{
+	opacity:0.3;
+	stroke:black;!important;
+    stroke-width:2;
+}
+
+#districtMap{
+	 height:0;
+    padding-top:93.63%;
+    position: relative; 
+	
+}
+
+
+/********* Offer CONTAINER CONTENT ( CSS WHEN ON LIST EVENTS DISPLAY ) *********/
+#content {
+	/*	border:1px solid yellow; */
+	height: 100%;
+	
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	margin: 1px;
+}
+
+#content:hover {
+	opacity: 0.95;
+}
+
+#eventimage img {
+	height: 100%;
+	width: 100%;
+	box-shadow: 10px 10px 20px #888888;
+}
+
+#eventimage {
+	z-index: 1000;
+}
+
+#eventdescription {
+	background: white;
+	margin-bottom: 20px;
+	/*  OPTIONAL.... INCREASES DESCRIPTIOJN HEIGHT   */
+	height: 270px;
+}
+
+#eventdescription p {
+	text-align: left;
+}
+
+#content h1 {
+	font-size: 15pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+#content h2 {
+	font-size: 12pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+#content p {
+	font-size: 9pt;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 5px 0px;
+}
+
+/********* Offer CONTENT ( CSS WHEN ON SINGLE EVENT DISPLAY ) *********/
+
+#content1 {
+	/*	border:1px solid yellow; */
+	height: 100%;
+	
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+/* 	margin: 1px; */
+}
+
+.btnGetIt{
+	
+	border-radius: 50px; 
+-moz-border-radius: 50px; 
+-webkit-border-radius: 50px; 
+border: 0px solid #800000;
+}
+
+#content1 img {
+	width:50%;
+}
+
+.equal, .equal > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 0 auto;
+}
+.eqheight{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    background-color:#efefef;
+}
+
+#equalheight {
+    overflow: hidden; 
+}
+#single_article1 {
+	display: -ms-flexbox;
+	-ms-box-orient: vertical;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	
+	padding-left:15px;
+	padding-right:15px;
+	width: 100%;
+	background-color: white;
+}
+/* TITLE */
+
+#article_title1 h1 {
+	font-size: 18pt font-style: strong;
+/* 	padding: 6px 30px; */
+}
+
+#article_ShareIcons1 p{
+/* 	padding: 6px 30px; */
+}
+
+/* PHOTO */
+#article_photo1 {
+/* padding: 6px 30px; */
+}
+
+#article_photo1 img {
+	width: 100%;
+	height: 100%;
+}
+
+/* EXTRA INFORMATION */
+#article_extra_info1 {
+	display: -ms-flexbox;
+	-ms-box-orient: horizontal;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row;
+	-moz-flex-flow: row;
+	-ms-flex-flow: row;
+	flex-flow: row;
+	
+/* 	padding: 6px 30px; */
+}
+
+#article_extra_info1 h2 {
+	font-size: 15pt;
+	font-style: strong;
+}
+
+#article_extra_info_left1 {
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;	
+}
+
+#article_extra_info_left1 img {
+	width: 50%;
+}
+
+
+#article_extra_info_middle1 {
+	-webkit-flex: 2;
+	-moz-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+
+#article_extra_info_right1 {
+	
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+/* DESCRIPTION */
+#article_description1 {
+/* 	padding: 6px 30px; */
+}
+
+/* FACEBOOK LIKE BUTTON */
+#article_Like_Button1 {
+/* 	padding: 6px 30px; */
+	text-align: right;
+}
+
+/* MAP */
+#article_map {
+/* 	margin: 6px 30px; */
+	height:400px;
+	width: :450px;
+	background-color: blue;
+}
+
+/* ARTICLE COMMENTS */
+#article_Comments1 {
+/* padding: 6px 30px; */
+}
