@@ -40,6 +40,12 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+		mavenRepo 'http://repo.spring.io/milestone'
+		mavenRepo "http://repo.desirableobjects.co.uk/"
+		mavenRepo "https://raw.github.com/fernandezpablo85/scribe-java/mvn-repo"
+		
+		//mavenRepo "http://repo.desirableobjects.co.uk/"
+		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -67,6 +73,15 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.1"
+		
+		// Plugins for the login and security
+		compile ':spring-security-core:2.0-RC2'
+		compile ":spring-security-ui:1.0-RC2"
+		//compile ":spring-security-oauth:2.1.0-RC4"
+		
+		//compile ":oauth:2.0.3"
+		//compile ":spring-security-oauth2-provider:2.0.3"
+		
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"

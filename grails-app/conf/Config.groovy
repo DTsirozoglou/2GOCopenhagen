@@ -113,3 +113,25 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'users.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'users.UserRole'
+grails.plugin.springsecurity.authority.className = 'users.Role'
+grails.plugin.springsecurity.requestMap.className = 'users.Requestmap'
+//grails.plugin.springsecurity.securityConfigType = 'Requestmap'
+grails.plugin.springsecurity.securityConfigType = 'Annotation'
+
+// Redirects users to front page when not logged in and want to see content that requires logging in.
+//grails.plugin.springsecurity.auth.loginFormUrl = '/'
+//grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/': ['permitAll'],
+	'/login/*':      ['permitAll']
+    
+]
+
+
+// Added by the Spring Security OAuth plugin:
+grails.plugin.springsecurity.oauth.domainClass = 'users.OAuthID'
