@@ -1,3 +1,5 @@
+import users.Requestmap
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -115,22 +117,38 @@ log4j = {
 }
 
 
+
+
+//Pessimistic lockdown. Can be turned off for dev purposes
+grails.plugin.springsecurity.rejectIfNoRule = false
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
+
 // Added by the Spring Security Core plugin:
+// Configs for spring security core
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'users.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'users.UserRole'
 grails.plugin.springsecurity.authority.className = 'users.Role'
 grails.plugin.springsecurity.requestMap.className = 'users.Requestmap'
-//grails.plugin.springsecurity.securityConfigType = 'Requestmap'
-grails.plugin.springsecurity.securityConfigType = 'Annotation'
+grails.plugin.springsecurity.securityConfigType = 'Requestmap'
+//grails.plugin.springsecurity.securityConfigType = 'Annotation'
+grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
+
 
 // Redirects users to front page when not logged in and want to see content that requires logging in.
 //grails.plugin.springsecurity.auth.loginFormUrl = '/'
 //grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/': ['permitAll'],
-	'/login/*':      ['permitAll']
-    
-]
+// if you set rejectIfNoRule or rejectPublicInvocations to true you'll 
+//need to configure the staticRules map to include URLs that can't otherwise be guarded
+//grails.plugin.springsecurity.controllerAnnotations.staticRules =grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+//   '/':               ['permitAll'],
+//   '/index':          ['permitAll'],
+//   '/index.gsp':      ['permitAll'],
+//   '/assets/**':      ['permitAll'],
+//   '/**/js/**':       ['permitAll'],
+//   '/**/css/**':      ['permitAll'],
+//   '/**/images/**':   ['permitAll'],
+//   '/**/favicon.ico': ['permitAll']
+//]
 
 
 // Added by the Spring Security OAuth plugin:

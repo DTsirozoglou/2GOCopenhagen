@@ -1,10 +1,38 @@
 import content.*
 import grails.buildtestdata.mixin.Build
+import users.Requestmap
+import users.Role
+import users.User
+import users.UserRole
 
 class BootStrap {
 
 	def init = { servletContext -> 
-
+		// Create roles and users for testing user system:
+		def adminRole = new Role(authority: 'ROLE_ADMIN').save(failOnError: true, flush:true)
+		
+		def userRole = new Role(authority: 'ROLE_USER').save(failOnError: true, flush:true)
+		
+		def testUser = new User(username: 'bob', password: 'password', email: "mail@mail.com").save(failOnError: true, flush:true)
+		//testUser.encodePassword()
+		UserRole.create(testUser, adminRole, true)
+		
+		assert User.count() == 1
+		assert Role.count() == 2
+		assert UserRole.count() == 1
+		new Requestmap(url: '/2gocopenhagen/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/js/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/css/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+	    new Requestmap(url: '/images/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/login/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/logout/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/*', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/profile/**', configAttribute: 'ROLE_USER').save()
+		new Requestmap(url: '/admin/**', configAttribute: 'ROLE_ADMIN').save()
+		new Requestmap(url: '/admin/role/**', configAttribute: 'ROLE_ADMIN').save()
+		new Requestmap(url: '/admin/user/**', configAttribute: 'ROLE_ADMIN').save()
+		new Requestmap(url: '/j_spring_security_switch_user',
+						 configAttribute: 'ROLE_SWITCH_USER,IS_AUTHENTICATED_FULLY').save()
 		// Create Sample Categories for Events (id 1-6)
 		def category1 = new Category(categoryName:'Music').save()
 		def category2 = new Category(categoryName:'Arts&Colture').save()
