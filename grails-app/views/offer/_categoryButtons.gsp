@@ -2,7 +2,7 @@
 <g:each status="category_id" var="i" in="${ ['All','Shop','Drink','Eat Out','See','Sort by'] }">
 
 	<div id="categoryButton" class="btn-group">
-		<g:if test="${category_id == selectedCategoryOfSingleEvent}" >
+		<g:if test="${category_id == selectedCategoryOfSingleOffer}" >
 			<g:set var="statusOfButton" value= "active" />
 		</g:if>
 		<g:else >

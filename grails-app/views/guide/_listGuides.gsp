@@ -1,11 +1,16 @@
+<g:if test="${paginate == null}">
+			<div id="SideBarBottomTitle" style="margin-bottom:20px;"><p class="btn_sidebar_title">WHAT'S HOT</p></div>
+</g:if>
+
 <div class="row">
 	<g:each in="${guideInstanceList}" status="i" var="guideInstance">
 		<div class="col-md-6 col-lg-6 ">
 					<div id="content">
 						<div id="guideimage">
-							<img src="${resource(dir: 'images', file: 'noma.jpg')}" 
-								onclick="singleGuideCall('${guideInstance.id}');" />
+							<img data-location="${guideInstance.id}" data-location2="${guideInstance.category.id - 6}" data-location3="${guideInstance.location.title}"
+								class="singleGuideInstance"	src="${resource(dir: 'images', file: 'noma.jpg')}"/>
 						</div>
+				
 						<div id="guidedescription">
 							
 								<h1>${fieldValue(bean: guideInstance, field: "title")}<br><br></h1>

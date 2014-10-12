@@ -1,10 +1,29 @@
-
-/* THE CSS OF THE DISTRICTMAP ON THE GUIDE PAGE */
-#districtMap {
-	
+svg {       
+	height: 100%;
+    display:block;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
 }
 
+path:hover {  
+	opacity:0.3;
+	stroke:black;!important;
+    stroke-width:2;
+}
+.btn-groupSvg > .btn.activepath{
+	opacity:0.3;
+	stroke:black;!important;
+    stroke-width:2;
+}
 
+#districtMap{
+	 height:0;
+    padding-top:93.63%;
+    position: relative; 
+	
+}
 
 /********* EVENT CONTAINER CONTENT ( CSS WHEN ON LIST EVENTS DISPLAY ) *********/
 #content {

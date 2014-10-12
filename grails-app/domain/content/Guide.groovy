@@ -16,7 +16,8 @@ import java.util.Date;
 class Guide extends Content{
 	
 	/** The location of the Event */
-	String address
+	Date startDate
+	Locations location
 
 	/** The constrains of the Event record fields */
 	static constraints = {

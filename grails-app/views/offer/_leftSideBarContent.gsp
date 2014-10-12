@@ -30,7 +30,6 @@
 	</g:each>
 </div>
 
-
 <div id="SideBarBottomTitle2" ><p class="btn_sidebar_title">NEW ARTICLES</p></div>
 
 <!--  LEFT BAR ON DESKTOP -->

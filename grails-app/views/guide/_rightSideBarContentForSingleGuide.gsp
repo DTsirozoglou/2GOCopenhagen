@@ -23,7 +23,7 @@
 	<g:each in="${offersInstanceList}" status="i" var="offerInstance">
 		<div id="contentSideBar">
 			<div id="eventimageSideBar">
-				<a href="events_single.html" target="_blank"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
+				<a href="${createLink(controller: 'Offer', action: 'index')}?singleOfferCall=${offerInstance.id}"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
 			</div>
 			<div id="eventdescriptionSideBar">
 				<p>${fieldValue(bean: offerInstance, field: "title")}</p>
@@ -39,7 +39,7 @@
 	<g:each in="${guideInstanceList}" status="i" var="guideInstance">
 		<div id="contentSideBar">
 			<div id="eventimageSideBar">
-				<a href="events_single.html" target="_blank"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
+				<a href="${createLink(controller: 'Guide', action: 'index')}?singleGuideCall=${guideInstance.id}"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
 			</div>
 			<div id="eventdescriptionSideBar">
 				<p> ${fieldValue(bean: guideInstance, field: "title")} </p>

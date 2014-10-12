@@ -99,18 +99,17 @@
 	<div id="article_Like_Button">
 		<p>Facebook Like </p>
 	</div>
-
+	
 	<div id="article_map"></div>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 	    $( window ).ready(function() {
-	    	setActiveCategory(${selectedCategoryOfSingleGuide});
 	    	loadGoogleMap(${guideLocation.lat},${guideLocation.lng},'${guideInstance.title}');
 		});
     </script>
-    
-    <div id="article_Comments">
-		<p>Comments Section </p>
+
+	<div id="article_Comments1">
+		<p>Comments Section</p>
 	</div>
 	
 </div>

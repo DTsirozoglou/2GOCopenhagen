@@ -112,8 +112,6 @@
 /JqueryUiPluginResources$_run_closure1_closure3.class
 /JqueryUiPluginResources$_run_closure1_closure4.class
 /JqueryUiPluginResources.class
-/OauthUrlMappings$__clinit__closure1.class
-/OauthUrlMappings.class
 /ResourcesBootStrap$_closure1.class
 /ResourcesBootStrap$_closure2.class
 /ResourcesBootStrap.class
@@ -136,5 +134,5 @@
 /resources.class
 /services/
 /tag_lib/
-/uk/
 /users/
+/hibernate/

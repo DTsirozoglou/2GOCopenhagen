@@ -159,7 +159,7 @@ class OfferController {
 			def newArticles = Article.list(max: 2, offset: 0,sort: "dateCreated", order: "asc")
 
 			[offerLocation:offerLocation,selectedSuburb:selectedSuburb,offerInstance:offerInstance,dateSelectedOnCalendar:dateSelectedOnCalendar,eventsInstanceList: newEvents,
-				newStuffInstanceList: newStuff, selectedCategory:selectedCategory,,guideInstanceList: newPlaces,popularInstanceList:mostPopular,articleInstanceList:newArticles]
+				newStuffInstanceList: newStuff, selectedCategory:selectedCategory,guideInstanceList: newPlaces,popularInstanceList:mostPopular,articleInstanceList:newArticles]
 		}
 	}
 

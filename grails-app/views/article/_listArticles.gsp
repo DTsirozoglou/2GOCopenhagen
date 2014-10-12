@@ -1,3 +1,6 @@
+<g:if test="${paginate == null}">
+			<div id="SideBarBottomTitle" style="margin-bottom:20px;"><p class="btn_sidebar_title">WHAT'S HOT</p></div>
+</g:if>
 
 <div class="row">
 	<g:each in="${articleInstanceList}" status="i" var="articleInstance">

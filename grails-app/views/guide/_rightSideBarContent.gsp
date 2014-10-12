@@ -20,13 +20,13 @@
 
 <!--  Right BAR2 ON Desktop -->
 <div id="SideBarBottomContent" class="visible-lg" >
-	<g:each in="${newEventsInstanceList}" status="i" var="newEventsInstance">
+	<g:each in="${eventsInstanceList}" status="i" var="eventInstance">
 		<div id="contentSideBar">
 			<div id="eventimageSideBar">
-				<a href="${createLink(controller: 'Event', action: 'index')}?singleEventCall=${newEventsInstance.id}"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
+				<a href="${createLink(controller: 'Event', action: 'index')}?singleEventCall=${eventInstance.id}"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
 			</div>
 			<div id="eventdescriptionSideBar">
-				<p> ${fieldValue(bean: newEventsInstance, field: "title")} </p>
+				<p>${fieldValue(bean: eventInstance, field: "title")} </p>
 			</div>
 		</div>
 	</g:each>
@@ -40,7 +40,7 @@
 	<g:each in="${offersInstanceList}" status="i" var="offerInstance">
 		<div id="contentSideBar">
 			<div id="eventimageSideBar">
-				<a href="events_single.html" target="_blank"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
+				<a href="${createLink(controller: 'Offer', action: 'index')}?singleOfferCall=${offerInstance.id}"><img src="${resource(dir: 'images', file: 'bieber.jpg')}" /></a>
 			</div>
 			<div id="eventdescriptionSideBar">
 				<p>${fieldValue(bean: offerInstance, field: "title")}</p>
@@ -48,5 +48,6 @@
 		</div>
 	</g:each>
 </div>
+
 
 

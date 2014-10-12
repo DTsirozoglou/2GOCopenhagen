@@ -240,7 +240,7 @@ class ArticleController {
 				def results = c.list(params) {
 					order("dateCreated", "asc")
 				}
-				render(template: 'listArticles', model:  [articleInstanceList: results,articleInstanceCount:results.getTotalCount()])
+				render(template: 'listArticles', model:  [articleInstanceList: results,articleInstanceCount:results.getTotalCount(),paginate:0])
 				break
 			// A category is highlighted
 			default:
@@ -252,7 +252,7 @@ class ArticleController {
 					ge("dateCreated", new Date(dateSelectedOnCalendar))
 					order("dateCreated", "asc")
 				}
-				render(template: 'listArticles', model:  [articleInstanceList: results,articleInstanceCount:results.getTotalCount()])
+				render(template: 'listArticles', model:  [articleInstanceList: results,articleInstanceCount:results.getTotalCount(),paginate:0])
 				break
 		}
 	}

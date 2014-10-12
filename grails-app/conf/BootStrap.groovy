@@ -137,6 +137,8 @@ class BootStrap {
 		new Offer(title:'Sample Offer10', description:'''offer10 description''' ,startDate:new Date('09/22/2015'), rating: 2.76, category:category13,categoryType:type,location:location1,address: 'Bispebjerg Parkalle 22').save()
 		new Offer(title:'Sample Offer11', description:'''offer11 description''' ,startDate:new Date('09/22/2015'), rating: 2.1, category:category12,categoryType:type,location:location3,address: 'Bispebjerg Parkalle 22').save()
 		
+		
+		assert Offer.count() == 11
 		// Create Sample Articles
 
 		new Article(title:'Sample Article1',description:'''Article1 Description''',	rating: 2,category:category17,categoryType:type,address: 'Bispebjerg Parkalle 22').save()
@@ -152,25 +154,26 @@ class BootStrap {
 
 		// Create Sample Guides
 		
-		new Guide(title:'Sample Guide1',description:'''Guide1 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type).save()
-		new Guide(title:'Sample Guide2',description:'''Guide2 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type).save()
-		new Guide(title:'Sample Guide3',description:'''Guide3 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type).save()
-		new Guide(title:'Sample Guide4',description:'''Guide4 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category12, categoryType:type).save()
-		new Guide(title:'Sample Guide5',description:'''Guide5 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category13, categoryType:type).save()
-		new Guide(title:'Sample Guide6',description:'''Guide6 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type).save()
-		new Guide(title:'Sample Guide7',description:'''Guide7 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type).save()
-		new Guide(title:'Sample Guide8',description:'''Guide8 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type).save()
-		new Guide(title:'Sample Guide9',description:'''Guide9 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type).save()
-		new Guide(title:'Sample Guide10',description:'''Guide10 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category12, categoryType:type).save()
-		new Guide(title:'Sample Guide11',description:'''Guide11 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category13, categoryType:type).save()
-		new Guide(title:'Sample Guide12',description:'''Guide12 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type).save()
-		new Guide(title:'Sample Guide13',description:'''Guide13 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type).save()
-		new Guide(title:'Sample Guide14',description:'''Guide14 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type).save()
-		new Guide(title:'Sample Guide15',description:'''Guide15 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type).save()
-		new Guide(title:'Sample Guide16',description:'''Guide16 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category12, categoryType:type).save()
-		new Guide(title:'Sample Guide17',description:'''Guide17 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category13, categoryType:type).save()
-		new Guide(title:'Sample Guide18',description:'''Guide18 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type).save()
+		new Guide(title:'Sample Guide1',description:'''Guide1 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type,location:location3, startDate:new Date('08/22/2015')).save()
+		new Guide(title:'Sample Guide2',description:'''Guide2 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type,location:location1, startDate:new Date('09/22/2015')).save()
+		new Guide(title:'Sample Guide3',description:'''Guide3 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type,location:location1, startDate:new Date('05/22/2015')).save()
+		new Guide(title:'Sample Guide4',description:'''Guide4 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category8, categoryType:type,location:location2, startDate:new Date('07/22/2015')).save()
+		new Guide(title:'Sample Guide5',description:'''Guide5 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category7, categoryType:type,location:location3, startDate:new Date('09/22/2015')).save()
+		new Guide(title:'Sample Guide6',description:'''Guide6 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type,location:location1, startDate:new Date('09/22/2015')).save()
+		new Guide(title:'Sample Guide7',description:'''Guide7 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type,location:location1, startDate:new Date('08/23/2015')).save()
+		new Guide(title:'Sample Guide8',description:'''Guide8 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type,location:location1, startDate:new Date('08/24/2015')).save()
+		new Guide(title:'Sample Guide9',description:'''Guide9 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type,location:location1, startDate:new Date('08/26/2015')).save()
+		new Guide(title:'Sample Guide10',description:'''Guide10 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category7, categoryType:type,location:location3, startDate:new Date('08/27/2015')).save()
+		new Guide(title:'Sample Guide11',description:'''Guide11 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category9, categoryType:type,location:location3, startDate:new Date('08/22/2015')).save()
+		new Guide(title:'Sample Guide12',description:'''Guide12 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type,location:location3, startDate:new Date('08/12/2015')).save()
+		new Guide(title:'Sample Guide13',description:'''Guide13 Description''', address: 'Bispebjerg Parkalle 22',	rating: 2,	category:category9,  categoryType:type,location:location2, startDate:new Date('08/30/2015')).save()
+		new Guide(title:'Sample Guide14',description:'''Guide14 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,  category:category10, categoryType:type,location:location2, startDate:new Date('08/21/2015')).save()
+		new Guide(title:'Sample Guide15',description:'''Guide15 Description''', address: 'Bispebjerg Parkalle 22',	rating: 5,	category:category11, categoryType:type,location:location2, startDate:new Date('08/25/2015')).save()
+		new Guide(title:'Sample Guide16',description:'''Guide16 Description''', address: 'Bispebjerg Parkalle 22',	rating: 4.2,category:category8, categoryType:type,location:location3, startDate:new Date('08/27/2015')).save()
+		new Guide(title:'Sample Guide17',description:'''Guide17 Description''', address: 'Bispebjerg Parkalle 22',	rating: 3,	category:category7, categoryType:type,location:location2, startDate:new Date('08/22/2015')).save()
+		new Guide(title:'Sample Guide18',description:'''Guide18 Description''', address: 'Bispebjerg Parkalle 22',	rating: 1,	category:category10, categoryType:type,location:location3, startDate:new Date('08/21/2015')).save()
 
+		assert Guide.count() == 18
 	}
 	def destroy = {
 	}
