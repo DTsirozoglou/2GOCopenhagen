@@ -131,7 +131,7 @@ grails.plugin.springsecurity.authority.className = 'users.Role'
 grails.plugin.springsecurity.requestMap.className = 'users.Requestmap'
 grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 //grails.plugin.springsecurity.securityConfigType = 'Annotation'
-grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
+//grails.plugin.springsecurity.securityConfigType = "InterceptUrlMap"
 
 
 // Redirects users to front page when not logged in and want to see content that requires logging in.
