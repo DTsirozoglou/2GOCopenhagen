@@ -1,3 +1,5 @@
+import org.springframework.security.access.ConfigAttribute;
+
 import content.*
 import grails.buildtestdata.mixin.Build
 import users.Requestmap
@@ -28,6 +30,8 @@ class BootStrap {
 		new Requestmap(url: '/article/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
 		new Requestmap(url: '/guide/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
 		new Requestmap(url: '/profile/**', configAttribute: 'ROLE_USER').save()
+		new Requestmap(url: '/register/**', ConfigAttribute: 'IS_AUTHENTiCATED_ANONYMOUSLY').save()
+		new Requestmap(url: '/oauth/**', ConfigAttribute: 'IS_AUTHENTiCATED_ANONYMOUSLY').save()
 		//new Requestmap(url: '/js/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
 		//#new Requestmap(url: '/css/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
 	    //new Requestmap(url: '/images/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()

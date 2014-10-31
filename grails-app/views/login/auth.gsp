@@ -41,7 +41,9 @@
 			</td>
 		</tr>
 	</table>
-
+	<oauth:connect provider="facebook" id="facebook-connect-link"><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'facebook.png')}" /></oauth:connect>
+	<oauth:connect provider="twitter" id="twitter-connect-link"><img class="visible-xs" src="${resource(dir: 'images/header_images', file: 'twitter.png')}"  /></oauth:connect>
+	<oauth:connect provider="google" id="google-connect-link"><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'google_plus.png')}"  /></oauth:connect>			
 	</div>
 	</form>
 	</div>

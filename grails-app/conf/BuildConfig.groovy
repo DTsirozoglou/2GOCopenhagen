@@ -44,7 +44,7 @@ grails.project.dependency.resolution = {
 		mavenRepo "http://repo.desirableobjects.co.uk/"
 		mavenRepo "https://raw.github.com/fernandezpablo85/scribe-java/mvn-repo"
 		
-		//mavenRepo "http://repo.desirableobjects.co.uk/"
+		mavenRepo "http://repo.desirableobjects.co.uk/"
 		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
@@ -77,7 +77,12 @@ grails.project.dependency.resolution = {
 		// Plugins for the login and security
 		compile ':spring-security-core:2.0-RC2'
 		compile ":spring-security-ui:1.0-RC2"
-		//compile ":spring-security-oauth:2.1.0-RC4"
+		//Oauths
+		compile ":spring-security-oauth:2.1.0-RC4"
+		compile ":spring-security-oauth-facebook:0.2"
+		compile ":spring-security-oauth-twitter:0.2"
+		compile ":spring-security-oauth-google:0.3.1"
+		
 		
 		//compile ":oauth:2.0.3"
 		//compile ":spring-security-oauth2-provider:2.0.3"

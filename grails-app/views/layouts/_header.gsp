@@ -24,7 +24,7 @@
 					<li class="visible-xs" ><a class="homeMobile" href="${request.contextPath}/"><img  src="${resource(dir: 'images/header_images', file: 'home.png')}"  /></a></li>
 					<li><a class="search"  href="">	<img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'search.png')}"  /><p class="visible-xs">Search</p></a></li>
 		            <li><a class="socialmediaImg"  href="https://www.facebook.com/2gocopenhagen"><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'facebook.png')}" /><p class="visible-xs">Facebook</p></a></li>
-					<li><a class="socialmediaImg"  href="https://twitter.com/2gocopenhagen"><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'twitter.png')}"  /><p class="visible-xs">Twitter</p></a></li>
+					<li><oauth:connect provider="twitter" id="twitter-connect-link"><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'twitter.png')}"  /></oauth:connect></li>
 					<li><a class="socialmediaImg" href=""><img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'google_plus.png')}"  /><p class="visible-xs">Google Plus</p></a></li>
 		        </ul>
 		    </div>	

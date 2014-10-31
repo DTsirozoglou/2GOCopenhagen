@@ -153,3 +153,36 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 
 // Added by the Spring Security OAuth plugin:
 grails.plugin.springsecurity.oauth.domainClass = 'users.OAuthID'
+oauth {
+
+	providers {
+	  
+	  facebook {
+		api = org.scribe.builder.api.FacebookApi
+		key = 'oauth_facebook_key'
+		secret = 'oauth_facebook_secret'
+		successUri = '/oauth/facebook/success'
+		failureUri = '/oauth/facebook/error'
+		callback = "http://localhost:8080/2GOCopenhagen/oauth/facebook/callback"
+	  }
+	  
+	  twitter {
+		  api = org.scribe.builder.api.TwitterApi
+		  key = 'oauth_twitter_key'
+		  secret = 'oauth_twitter_secret'
+		  successUri = '/oauth/twitter/success'
+		  failureUri = '/oauth/twitter/error'
+		  callback = "http://localhost:8080/2GOCopenhagen/oauth/twitter/callback"
+		}
+	  
+	  google {
+		  api = org.scribe.builder.api.GoogleApi
+		  key = 'oauth_google_key'
+		  secret = 'oauth_google_secret'
+		  successUri = '/oauth/google/success'
+		  failureUri = '/oauth/google/error'
+		  callback = "${baseURL}/oauth/google/callback"
+		  scope = 'https://www.googleapis.com/auth/userinfo.email'
+		}
+	}
+  }
