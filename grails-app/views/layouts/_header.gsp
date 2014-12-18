@@ -20,6 +20,43 @@
 		    
 		    <div id="navbarCollapse" class="collapse navbar-collapse nav navbar-nav navbar-right">
 		        <ul class="nav navbar-nav">
+	        		
+	        		<sec:ifAllGranted roles="ROLE_ADMIN">
+						<li class="dropdown"><g:link class="navigationCircles  "
+							controller="admin" action="showPanel"> <span
+								class="glyphicon glyphicon-user"></span> Dashboard
+						</g:link></li>
+						<li class="dropdown"><g:remoteLink
+								class="logout dropdown-toggle js-activated" controller="logout"
+								method="post" asynchronous="false" onSuccess="location.reload()">
+								<span class="glyphicon glyphicon-eye-open"></span> Logout </g:remoteLink></li>
+					</sec:ifAllGranted>
+			
+					<sec:ifAllGranted roles="ROLE_USER">
+			
+						<li class="dropdown"><g:link class="navigationCircles  "
+							controller="profile" action="profile"> <span
+								class="glyphicon glyphicon-user"></span> Profile
+						 </g:link></li>
+						<li class="dropdown" id="menuLogin"><g:remoteLink
+								class="logout dropdown-toggle js-activated" controller="logout"
+								method="post" asynchronous="false" onSuccess="location.reload()">
+								<span class="glyphicon glyphicon-eye-open"></span> Logout </g:remoteLink></li>
+					</sec:ifAllGranted>
+					
+					<sec:ifNotLoggedIn>
+						<li class="dropdown" id="menuLogin"><a href="#"
+							class="dropdown-toggle js-activated" id="navLogin"> Login <b class="caret"></b></a>
+			
+							<ul class="dropdown-menu nogradient">
+								<li style="width: 350px;"><g:render
+										template="/includes/ajaxLogin" /></li>
+			
+							</ul></li>
+					</sec:ifNotLoggedIn>
+		        
+		        
+		        
 		            <li class="hidden-xs " ><a class="home" href="${request.contextPath}/"><img  src="${resource(dir: 'images/header_images', file: 'home.png')}"  /></a></li>
 					<li class="visible-xs" ><a class="homeMobile" href="${request.contextPath}/"><img  src="${resource(dir: 'images/header_images', file: 'home.png')}"  /></a></li>
 					<li><a class="search"  href="">	<img class="hidden-xs" src="${resource(dir: 'images/header_images', file: 'search.png')}"  /><p class="visible-xs">Search</p></a></li>
@@ -33,6 +70,8 @@
 		</div>
 	</div>
 		
+
+
 		<!--  MAIN NAVIGATION WITH 4 CIRCLES FOR DESKTOP  -->
 	<div id="topmenu" class="hidden-xs">
 		

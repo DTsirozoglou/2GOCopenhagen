@@ -5,7 +5,9 @@ import java.sql.Timestamp
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['permitAll'])
 /**
  * The controller of event includes all the actions that a user can perform when navigating to the Events and Single Event pages.
  * 

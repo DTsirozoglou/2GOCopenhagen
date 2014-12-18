@@ -6,7 +6,9 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import org.codehaus.groovy.runtime.*;
 
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['permitAll'])
 /**
  * The controller of article includes all the actions that a user can perform when navigating to the Articles and Single Article pages.
  * 

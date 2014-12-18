@@ -5,7 +5,9 @@ import java.sql.Timestamp
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 
+import grails.plugin.springsecurity.annotation.Secured
 
+@Secured(['permitAll'])
 /**
  * The controller of Guide includes all the actions that a user can perform when navigating to the Guides and Single Guide pages.
  * 
@@ -91,7 +93,7 @@ class GuideController {
 						}
 					
 					}
-					else if(params.category.toInteger() == 0){//Index action is called with a selected category
+					else if(params.category != null && params.category.toInteger() == 0){//Index action is called with a selected category
 						selectedCategory = params.category
 						selectedSuburb = params.suburb
 						dateSelectedOnCalendar = new Date()
@@ -362,7 +364,7 @@ class GuideController {
 			def subur = Locations.findByTitle(selectedSuburb)
 			c = Guide.createCriteria()
 			results
-			if (params.category.toInteger() == 0){
+			if (params.category != null && params.category.toInteger() == 0){
 					selectedCategory = 0
 					results = c.list(params) {
 					eq("location", subur )
