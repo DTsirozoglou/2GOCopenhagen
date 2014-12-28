@@ -83,7 +83,9 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-oauth-twitter:0.2"
 		compile ":spring-security-oauth-google:0.3.1"
 		
-		
+		compile ":mail:1.0.7"
+		compile ":phonenumbers:0.9"
+		compile ":country-selector:1.0"
 		//compile ":oauth:2.0.3"
 		//compile ":spring-security-oauth2-provider:2.0.3"
 		

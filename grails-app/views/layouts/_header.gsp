@@ -45,14 +45,7 @@
 					</sec:ifAllGranted>
 					
 					<sec:ifNotLoggedIn>
-						<li class="dropdown" id="menuLogin"><a href="#"
-							class="dropdown-toggle js-activated" id="navLogin"> Login <b class="caret"></b></a>
-			
-							<ul class="dropdown-menu nogradient">
-								<li style="width: 350px;"><g:render
-										template="/includes/ajaxLogin" /></li>
-			
-							</ul></li>
+						<li class="dropdown" id="menuLogin"><g:link controller= "login" method="post" asynchronous="false"> Login  </g:link></li>
 					</sec:ifNotLoggedIn>
 		        
 		        

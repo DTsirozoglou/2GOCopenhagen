@@ -65,6 +65,20 @@ grails {
         }
     }
 }
+
+
+grails {
+   mail {
+     host = "smtp.gmail.com"
+     port = 465
+     username = "dimitristsirozoglou@gmail.com"
+     password = "mitsaras1986"
+     props = ["mail.smtp.auth":"true", 					   
+              "mail.smtp.socketFactory.port":"465",
+              "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+              "mail.smtp.socketFactory.fallback":"false"]
+   }
+}
  
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
@@ -126,6 +140,7 @@ grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 // Added by the Spring Security Core plugin:
 // Configs for spring security core
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'users.User'
+grails.plugin.springsecurity.userLookup.usernamePropertyName='username'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'users.UserRole'
 grails.plugin.springsecurity.authority.className = 'users.Role'
 grails.plugin.springsecurity.requestMap.className = 'users.Requestmap'
@@ -153,17 +168,22 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 
 // Added by the Spring Security OAuth plugin:
 grails.plugin.springsecurity.oauth.domainClass = 'users.OAuthID'
+
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'users.UserRole'
+grails.plugin.springsecurity.authority.className = 'users.Role'
+
 oauth {
 
 	providers {
 	  
 	  facebook {
 		api = org.scribe.builder.api.FacebookApi
-		key = 'oauth_facebook_key'
-		secret = 'oauth_facebook_secret'
-		successUri = '/oauth/facebook/success'
-		failureUri = '/oauth/facebook/error'
-		callback = "http://localhost:8080/2GOCopenhagen/oauth/facebook/callback"
+		key = '753341204755095'
+		secret = '141f8ad7ff0534226625de9a78f8dad6'
+		scope = 'email,read_stream,publish_actions,user_birthday,publish_stream'
+		successUri = 'http://localhost:8080/2GOCopenhagen/auth/onSuccess?provider=facebook'
+        failureUri = '${application.baseUrl}/springSecurityOAuthController/onFailure?provider=twitter'
+        callback = 'http://localhost:8080/2GOCopenhagen/oauth/facebook/callback'
 	  }
 	  
 	  twitter {
@@ -186,3 +206,4 @@ oauth {
 		}
 	}
   }
+
