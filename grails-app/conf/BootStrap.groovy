@@ -11,13 +11,13 @@ class BootStrap {
 
 	def init = { servletContext -> 
 		// Create roles and users for testing user system:
-//		def adminRole = new Role(authority: 'ROLE_ADMIN').save(failOnError: true, flush:true)
-//		
-//		def userRole = new Role(authority: 'ROLE_USER').save(failOnError: true, flush:true)
-//		
-//		def testUser = new User(password: 'password', username: "mail@mail.com", email: "mail@mail.com").save(failOnError: true, flush:true)
-//		//testUser.encodePassword()
-//		UserRole.create(testUser, adminRole, true)
+		def adminRole = new Role(authority: 'ROLE_ADMIN').save(failOnError: true, flush:true)
+		
+		def userRole = new Role(authority: 'ROLE_USER').save(failOnError: true, flush:true)
+		
+		def testUser = new User(password: 'password', username: "mail@mail.com", email: "mail@mail.com").save(failOnError: true, flush:true)
+		//testUser.encodePassword()
+		UserRole.create(testUser, adminRole, true)
 //		
 //		assert User.count() == 1
 //		assert Role.count() == 2
