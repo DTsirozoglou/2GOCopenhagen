@@ -1,3 +1,17 @@
+*.iws
+*Db.properties
+*Db.script
+.settings
+.classpath
+.project
+eclipse
+stacktrace.log
+target
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
+web-app/WEB-INF/tld/c.tld
+web-app/WEB-INF/tld/fmt.tld
 /grails/
 /org/
 /ApplicationResources$_run_closure1.class
@@ -136,3 +150,4 @@
 /tag_lib/
 /users/
 /hibernate/
+/spring/

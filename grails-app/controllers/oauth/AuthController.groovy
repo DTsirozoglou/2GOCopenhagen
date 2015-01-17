@@ -4,7 +4,7 @@ import socialMediaSecurity.SpringSecuritySigninService
 import socialMediaService.AuthService
 import users.*
 
-
+//TODO:What we must do when the user has already an account and then he tries to login with fb auth?
 class AuthController {
 
     SpringSecuritySigninService springSecuritySigninService
