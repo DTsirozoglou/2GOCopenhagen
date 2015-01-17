@@ -5,6 +5,7 @@ import content.Locations;
 class User {
 
 	transient springSecurityService
+	Profile profile
 
 	String password
 	String username
@@ -20,7 +21,6 @@ class User {
 	String avatarUrl
 
 	static transients = ['springSecurityService']
-	static hasOne = [profile:Profile]
 	static hasMany = [oAuthIDs: OAuthID]
 	
 	static constraints = {

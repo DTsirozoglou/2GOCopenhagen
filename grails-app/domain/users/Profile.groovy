@@ -7,13 +7,13 @@ class Profile {
 	def phoneNumberService
 	def countrySelectorService
 	
-	User user
 	String country
 	String firstName
 	String lastName
 	String phoneNumber
 	Locations location
 	
+	static belongsTo = [user:User]
     static constraints = {
 		country(nullable: true, validator: {val, obj ->
 			def allowedCountryCodes = obj.countrySelectorService.allowedCountryCodes()
