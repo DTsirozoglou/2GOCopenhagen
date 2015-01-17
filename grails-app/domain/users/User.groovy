@@ -27,7 +27,7 @@ class User {
 		username blank: false, unique: true, email: true
 		email blank: false, unique: true, email: true
 		password blank: false
-		profile unique: true,nullable: true
+		profile nullable: true
 		avatarUrl nullable: true
 		oauthProvider nullable: true
 		oauthId nullable: true
