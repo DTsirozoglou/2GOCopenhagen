@@ -47,8 +47,8 @@ grails.project.dependency.resolution = {
 		mavenRepo "http://repo.desirableobjects.co.uk/"
 		
 		//for heroku
-		mavenRepo 'http://raykrueger.googlecode.com/svn/repository' // for hibernate-memcached
-		mavenRepo 'http://files.couchbase.com/maven2/'
+//		mavenRepo 'http://raykrueger.googlecode.com/svn/repository' // for hibernate-memcached
+//		mavenRepo 'http://files.couchbase.com/maven2/'
 		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
@@ -91,7 +91,7 @@ grails.project.dependency.resolution = {
 		compile ':webxml:1.4.1'
 		compile ':heroku:1.0.1'
 		compile ':cloud-support:1.0.11'
-		compile ":memcached:1.0.3.2"
+//		compile ":memcached:1.0.3.2"
 		
 		compile ":mail:1.0.7"
 		compile ":phonenumbers:0.9"
