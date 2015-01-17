@@ -21,7 +21,7 @@ class User {
 	String avatarUrl
 
 	static transients = ['springSecurityService']
-	static hasMany = [oAuthIDs: OAuthID]
+//	static hasMany = [oAuthIDs: OAuthID]
 	
 	static constraints = {
 		username blank: false, unique: true, email: true
