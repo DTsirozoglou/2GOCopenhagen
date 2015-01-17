@@ -181,7 +181,7 @@ oauth {
 		key = '753341204755095'
 		secret = '141f8ad7ff0534226625de9a78f8dad6'
 		scope = 'email,read_stream,publish_actions,user_birthday,publish_stream'
-		successUri = 'http://localhost:8080/2GOCopenhagen/auth/onSuccess?provider=facebook'
+		successUri = '/auth/onSuccess?provider=facebook'
         failureUri = '${application.baseUrl}/springSecurityOAuthController/onFailure?provider=twitter'
         callback = 'http://localhost:8080/2GOCopenhagen/oauth/facebook/callback'
 	  }
