@@ -46,6 +46,10 @@ grails.project.dependency.resolution = {
 		
 		mavenRepo "http://repo.desirableobjects.co.uk/"
 		
+		//for heroku
+		mavenRepo 'http://raykrueger.googlecode.com/svn/repository' // for hibernate-memcached
+		mavenRepo 'http://files.couchbase.com/maven2/'
+		
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
@@ -54,7 +58,8 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        runtime 'mysql:mysql-connector-java:5.1.24'
+//        runtime 'mysql:mysql-connector-java:5.1.24'
+		runtime 'postgresql:postgresql:8.4-702.jdbc3'
     }
 
     plugins {
@@ -82,6 +87,11 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-oauth-facebook:0.2"
 //		compile ":spring-security-oauth-twitter:0.2"
 //		compile ":spring-security-oauth-google:0.3.1"
+		
+		compile ':webxml:1.4.1'
+		compile ':heroku:1.0.1'
+		compile ':cloud-support:1.0.11'
+		compile ":memcached:1.0.3.2"
 		
 		compile ":mail:1.0.7"
 		compile ":phonenumbers:0.9"

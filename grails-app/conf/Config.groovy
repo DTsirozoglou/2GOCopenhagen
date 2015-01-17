@@ -171,7 +171,7 @@ grails.plugin.springsecurity.oauth.domainClass = 'users.OAuthID'
 
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'users.UserRole'
 grails.plugin.springsecurity.authority.className = 'users.Role'
-
+grails.plugin.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
 oauth {
 
 	providers {
