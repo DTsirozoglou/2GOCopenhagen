@@ -45,7 +45,7 @@
 <body>
 	<div id='login'>
 		<div class='inner'>
-			<g:if test="${lastException && !(lastException instanceof UnapprovedClientAuthenticationException)}">
+			<g:if test="${lastException}">
       <div class="error">
         <h2>Woops!</h2>
 
