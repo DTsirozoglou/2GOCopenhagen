@@ -162,7 +162,6 @@ grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 //   '/**/js/**':       ['permitAll'],
 //   '/**/css/**':      ['permitAll'],
 //   '/**/images/**':   ['permitAll'],
-//   '/**/favicon.ico': ['permitAll']
 //]
 
 
