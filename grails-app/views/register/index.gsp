@@ -30,16 +30,19 @@
 				<s2ui:textFieldRow name='username' bean="${command}" value="${command.username}"
 				                   size='40' labelCode='user.username.label' labelCodeDefault='E-mail'/>
 				                   
-				                   <s2ui:textFieldRow name='firstName' bean="${command}" value="${command.firstName}"
-				                   size='40' labelCode='first Name' labelCodeDefault='First Name'/>
-				                   
-				                   <s2ui:textFieldRow name='lastName' bean="${command}" value="${command.lastName}"
-				                   size='40' labelCode='Last Name' labelCodeDefault='last Name'/> 
-				                   <s2ui:textFieldRow name='country' bean="${command}" value="${command.country}"
-				                   size='40' labelCode='user.counrty.label' labelCodeDefault='Country'/>
-				                   
-				<s2ui:textFieldRow name='phoneNumber' bean="${command}" value="${command.phoneNumber}"
-				                   size='40' labelCode='user.phoneNumber.label' labelCodeDefault='phoneNumber'/>
+<%--				 <s2ui:textFieldRow name='firstName' bean="${command}" value="${command.firstName}"--%>
+<%--				                   size='40' labelCode='first Name' labelCodeDefault='First Name'/>--%>
+<%--				                   --%>
+<%--				                   <s2ui:textFieldRow name='lastName' bean="${command}" value="${command.lastName}"--%>
+<%--				                   size='40' labelCode='Last Name' labelCodeDefault='last Name'/> --%>
+<%--				                   --%>
+<%--				                   <s2ui:textFieldRow name='country' bean="${command}" value="${command.country}"--%>
+<%--				                   size='40' labelCode='user.counrty.label' labelCodeDefault='Country'/>--%>
+<%--				 --%>
+<%--				 <g:select name="location" from="${location.title}"  bean="${command}" value="${command.location}" noSelection="['':'-Choose your Location-']"/>     --%>
+<%--				              --%>
+<%--				<s2ui:textFieldRow name='phoneNumber' bean="${command}" value="${command.phoneNumber}"--%>
+<%--				                   size='40' labelCode='user.phoneNumber.label' labelCodeDefault='phoneNumber'/>--%>
 		
 				<s2ui:passwordFieldRow name='password' labelCode='user.password.label' bean="${command}"
 		                             size='40' labelCodeDefault='Password' value="${command.password}"/>

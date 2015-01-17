@@ -1,5 +1,6 @@
 package users
 
+import content.Locations;
 import grails.plugin.springsecurity.SpringSecurityUtils
 import grails.plugin.springsecurity.authentication.dao.NullSaltSource
 import grails.plugin.springsecurity.ui.RegistrationCode
@@ -23,23 +24,18 @@ class RegisterController extends grails.plugin.springsecurity.ui.RegisterControl
 		def copy = [:] + (flash.chainedParams ?: [:])
 		copy.remove 'controller'
 		copy.remove 'action'
-		[command: new RegisterCommand(copy)]
+		[command: new RegisterCommand(copy),location:Locations.list()]
 	}
 	
 	def register(RegisterCommand command) {
 
-		println "lala2"
-		println command.errors
-		
 		if (command.hasErrors()) {
 			render view: 'index', model: [command: command]
 			return
 		}
 
-		println "lala5"
 		String salt = saltSource instanceof NullSaltSource ? null : command.username
-		def user = lookupUserClass().newInstance(username: command.username,email: command.username, phoneNumber: command.phoneNumber,firstName:command.firstName,
-				lastName:command.lastName, country:command.country,accountLocked: true, enabled: true)
+		def user = lookupUserClass().newInstance(username: command.username,email: command.username,accountLocked: true, enabled: true)
 
 		RegistrationCode registrationCode = springSecurityUiService.register(user, command.password, salt)
 		if (registrationCode == null || registrationCode.hasErrors()) {
@@ -68,7 +64,6 @@ class RegisterController extends grails.plugin.springsecurity.ui.RegisterControl
 	
 	def verifyRegistration() {
 		
-		println "lala2322"
 				def conf = SpringSecurityUtils.securityConfig
 				String defaultTargetUrl = conf.successHandler.defaultTargetUrl
 		
@@ -193,71 +188,17 @@ class RegisterController extends grails.plugin.springsecurity.ui.RegisterControl
 				String postResetUrl = conf.ui.register.postResetUrl ?: conf.successHandler.defaultTargetUrl
 				redirect uri: postResetUrl
 			}
-		
-			protected String generateLink(String action, linkParams) {
-				createLink(base: "$request.scheme://$request.serverName:$request.serverPort$request.contextPath",
-						controller: 'register', action: action,
-						params: linkParams)
-			}
-		
-			protected String evaluate(s, binding) {
-				new SimpleTemplateEngine().createTemplate(s).make(binding)
-			}
-		
-			static final passwordValidator = { String password, command ->
-				if (command.username && command.username.equals(password)) {
-					return 'command.password.error.username'
-				}
-		
-				if (!checkPasswordMinLength(password, command) ||
-					!checkPasswordMaxLength(password, command) ||
-					!checkPasswordRegex(password, command)) {
-					return 'command.password.error.strength'
-				}
-			}
-		
-			static boolean checkPasswordMinLength(String password, command) {
-				def conf = SpringSecurityUtils.securityConfig
-		
-				int minLength = conf.ui.password.minLength instanceof Number ? conf.ui.password.minLength : 8
-		
-				password && password.length() >= minLength
-			}
-		
-			static boolean checkPasswordMaxLength(String password, command) {
-				def conf = SpringSecurityUtils.securityConfig
-		
-				int maxLength = conf.ui.password.maxLength instanceof Number ? conf.ui.password.maxLength : 64
-		
-				password && password.length() <= maxLength
-			}
-		
-			static boolean checkPasswordRegex(String password, command) {
-				def conf = SpringSecurityUtils.securityConfig
-		
-				String passValidationRegex = conf.ui.password.validationRegex ?:
-						'^.*(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$'
-		
-				password && password.matches(passValidationRegex)
-			}
-		
-			static final password2Validator = { value, command ->
-				if (command.password != command.password2) {
-					return 'command.password2.error.mismatch'
-				}
-			}
+	
 }
 
 class RegisterCommand extends grails.plugin.springsecurity.ui.RegisterCommand{
 	
 		String username
-		String firstName
-		String lastName
 		String email
-		String country
-		String phoneNumber
 		String password
 		String password2
+		
+		Locations location
 	
 		def grailsApplication
 		def countrySelectorService
@@ -266,21 +207,12 @@ class RegisterCommand extends grails.plugin.springsecurity.ui.RegisterCommand{
 			username blank: false, email: true, validator: { value, command ->
 				if (value) {
 					def User = command.grailsApplication.getDomainClass(SpringSecurityUtils.securityConfig.userLookup.userDomainClassName).clazz
-					println "lala3"
 					if (User.findByUsername(value)) {
 						return 'registerCommand.username.unique'
 					}
 				}
 			}
 			email nullable:true
-			firstName nullable:true
-			lastName nullable:true
-			country(nullable: true, validator: {val, obj ->
-				def allowedCountryCodes = obj.countrySelectorService.allowedCountryCodes()
-				if(val !=null && !allowedCountryCodes.contains(val))
-				   return "org.grails.plugins.countrySelector.country.notAllowed"
-			 })
-			phoneNumber (phoneNumber: true, nullable:true)
 			password blank: false, validator: RegisterController.passwordValidator
 			password2 validator: RegisterController.password2Validator
 		}
